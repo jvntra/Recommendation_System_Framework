@@ -27,27 +27,29 @@ An RS is an machine learning system. You train your model with prior user behavi
 	1.) Measuring your systems ability to predict how people rated things in the past by using the train-test-split method.
 	2.) Prime the system using only training data, where it learns the relationships it needs between items and between users and predicting on unseen data or the test set.
 
-Once trained you can ask it to make predictions about how a new user might rate some item they've never seen before. So you predict the rating a test user would give & compare it to the real answer. Over large groups of users, you can end with a meaningful number that tells you how good your RS is at recommending things, more specifically, recommending things people *already watched and rated*. By using these methods, all we can really do is predict how people rated movies they already saw which is not the point of an RS. *We want to recommend new things to people that they havent interacted with and will find interesting* This is fundamentally impossible offline. For offline methods we have to make due with approaches and evaluations like MAE and RMSE.
+Once trained you can ask it to make predictions about how a new user might rate some item they've never seen before. So you predict the rating a test user would give & compare it to the real answer. Over large groups of users, you can end with a meaningful number that tells you how good your RS is at recommending things, more specifically, recommending things people *already watched and rated*. By using these methods, all we can really do is predict how people rated movies they already saw which is not the point of an RS. 
+
+*We want to recommend new things to people that they havent interacted with and will find interesting* This is fundamentally impossible offline. For offline methods we have to make due with approaches and evaluations like MAE and RMSE.
 
 
 ### Evaluation & Accuracy Metrics
 
-*MAE:*
+**MAE:**
 
 the average value of errors (predicted-actual) in rating predictions.
 
-*RMSE:*
+**RMSE:**
 
 The square root of the squared error average.
 
 This metric is particularly useful because it penalizes you more when youre rating prediction is way off from the actual.
 
-#### A note about accuracy
+*A note about accuracy*
 Accuracy isn't really measuring what we want RS's to do. Users in a dynamic real-world situation couldn,t care less about what your system thinks you should've rated some movie they already saw and rated. Rating predictions themselves are really of limited value. Its less important that a RS thinks youll rate up three stars, whats important is what the RS thinks about the best movies for you to see are and thats a very different problem to solve. Overall what matters is what movies or product you put in front of users in a top-N recommender list and how users interact with those products when recommended.
 
 xx include blurb about the netflix prize and how it set a precedent early on to use rmse as an evaluator that was later found to be not useful for online recommendersxx
 
-*Hit Rate:*
+**Hit Rate:**
 
 You generate top N recommendations for all users in the test set. If one of the recommendations in a users top-N recommendations is something they actually rated, you consider that a hit. You manage to show the users something that they've found interesting enough to consume on their own already, so well consider that a success. 
 
@@ -55,10 +57,10 @@ xx put hit rate formula here xx
 
 Just add all the hits in your top-n recs for every user in the test set and divide by all the users and thats the hit rate.
 
-*Leave-one-out Cross Validation*
+**Leave-one-out Cross Validation**
 Hit Rate is easy enough to understand but measuring it is a bit tricky. We cant use the same train-test or cross validation approaches to measuring accuracy because we arent measuring the accuracy on individual ratings. We are measuring the accuracy of top-n lists for individual users. You could measure hit rate on top-n lists for individual users.
 
-*Average Reciprocal Hit Rate (ARHR)*
+**Average Reciprocal Hit Rate (ARHR)**
 
 A variation on hit rate is is ARHR. It's just like hit rate except it accounts where in the top-n lists your hits appear. So you end up getting more credit for successfully recommending an item in the top slot than in the bottom slot. This is a more user-focused metric since users tend to focus on the beginning of lists. The only difference between ARHR and Hit Rate is that instead of summing up number of hits over , the reciprocal rank of each hit is summed up.So if we successfully predict a recommendation in slot three, that only counts as 1/3. But a hit in slot one of our top n recommendations receives a full weight of 1.0. Whether this makes sense or not depends on how the recommendations are displayed. If a user has to scroll to see the lower items in a top-n lists, then it makes sense to penalize good recommendations that appear too low in the list where the user has to work to find them
 
@@ -70,7 +72,7 @@ xx put in ARHR formula here, adjust placement of table following relevant text. 
 |2|1/2|
 |1|1|
 
-*Cumulative Hit Rank (cHR)*
+**Cumulative Hit Rank (cHR)**
 
 Another variation of hit rate is cHR. It means that we throw away hits of predicted ratings below some threshold. The idea is we shouldnt get credit for recommending items to a user that they wouldn't actually enjoy. In the example below, if we had a cutoff of 3 stars we throw away the hits for the second and fourth items in these test results and hour hit rate metric wouldnt count them at all.
 
@@ -81,7 +83,7 @@ Another variation of hit rate is cHR. It means that we throw away hits of predic
 |1|5.0|
 |0|2.0|
 
-*Rating Hit Rate*
+**Rating Hit Rate**
 
 Yet another way to look at hit rate is to break it down by predicted rating score. It can be a good way to get an idea of the distribution of how good your algorithm thinks recommended movies are that actually get a hit. Ideally you want to recommend movies that they actually liked. So breaking down the distribution gives you some sense of how well youre doing in more detail.
 
