@@ -88,7 +88,7 @@ Another variation of hit rate is cHR. It means that we throw away hits of predic
 Yet another way to look at hit rate is to break it down by predicted rating score. It can be a good way to get an idea of the distribution of how good your algorithm thinks recommended movies are that actually get a hit. Ideally you want to recommend movies that they actually liked. So breaking down the distribution gives you some sense of how well youre doing in more detail.
 
 |Rating|Hit Rate|
-|______|________|
+|------|--------|
 |5.0|0.001|
 |4.0|0.004|
 |3.0|0.030|
