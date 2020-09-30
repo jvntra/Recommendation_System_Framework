@@ -1,3 +1,5 @@
+# Author: Jean-Paul (JP) Ventura
+
 import os
 import csv
 import sys
