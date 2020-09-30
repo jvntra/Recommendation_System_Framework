@@ -1,6 +1,5 @@
 # Recommendation Systems with MovieLens User Rating Data.
 
-
 Data Science cohort 062220
 
 ## Introduction
@@ -47,7 +46,7 @@ This metric is particularly useful because it penalizes you more when youre rati
 *A note about accuracy*
 Accuracy isn't really measuring what we want RS's to do. Users in a dynamic real-world situation couldn,t care less about what your system thinks you should've rated some movie they already saw and rated. Rating predictions themselves are really of limited value. Its less important that a RS thinks youll rate up three stars, whats important is what the RS thinks about the best movies for you to see are and thats a very different problem to solve. Overall what matters is what movies or product you put in front of users in a top-N recommender list and how users interact with those products when recommended.
 
-xx include blurb about the netflix prize and how it set a precedent early on to use rmse as an evaluator that was later found to be not useful for online recommendersxx
+xx include blurb about the netflix prize and how it set a precedent early on to use rmse as an evaluator that was later found to be not useful for online recommenders xx
 
 **Hit Rate:**
 
@@ -96,3 +95,7 @@ Yet another way to look at hit rate is to break it down by predicted rating scor
 |1.0|0.0005|
 
 The world of recommender systems would probably look a bit different if Netflix awarded its prize on hit rate instead of rmse. It turns out that small improvements in rmse can lead to large improvements in hit rates, which is what really matters. But it also turns out that you can build RS's with great hit rates but with poor RMSE scores.
+
+xx add coverage, diversity, novelty, churn, responsiveness metrics xx
+
+xx add blurb about how these metrics aid in creating a recommendations for popular items as well as items found in the 'long tail' xx
