@@ -1,6 +1,6 @@
 # Recommendation Systems with MovieLens User Rating Data.
 
-**Please Note:** the projects content serving for course evaluation is `MovieLens_EDA.ipynb` which contains all my EDA and modeling processes. All other content for the recommendation system framework I'm building is **under development**
+**Please Note:** the projects content serving for course evaluation is `MovieLens_EDA.ipynb` which contains all my EDA and modeling processes. All other content for the recommendation system framework I'm building is **under development**.
 
 
 ## Introduction
