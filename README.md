@@ -92,7 +92,7 @@ In the future, I will build onto this project and add better recommendations. On
 
 [TowardsDataScience blog](https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada)
 
-[Sundog Education](www.https://sundog-education.com/)
+[Sundog Education](www.sundog-education.com/)
 
 
 
