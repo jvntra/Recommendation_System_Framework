@@ -80,3 +80,19 @@ This technology can be marketed to online streaming services who would benefit g
 
 In the future, I will build onto this project and add better recommendations. One way we plan on doing this is only recommending movies based on certain genres if thats what the user wants to see. Another feature that we would like to add is a non-personalized recommendation system. We will list the top movies from years that the user chooses and only show the movies which they have not yet seen. Also i will continue to build a recommendation system framework that can be scaled and productionized and test it on the complete MovieLens 27M dataset.
 
+[Here](https://docs.google.com/presentation/d/1fF_0yBetXAEQTaK5Xpuev0fsdGgYcTOA9FDFOQpR170/edit?usp=sharing) is a link to a presentation slide deck for this work.
+
+## Sources
+
+[MovieLens Data](https://grouplens.org/datasets/movielens/)
+
+[Surprise Documentation](https://surprise.readthedocs.io/en/stable/)
+
+[IMDb](https://www.themoviedb.org/)
+
+[TowardsDataScience blog](https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada)
+
+[Sundog Education](www.https://sundog-education.com/)
+
+
+
